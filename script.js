@@ -17,6 +17,65 @@ if (hamburger && mobileNav) {
   });
 }
 
+// ── Mobile hero typewriter ───────────────────────────────────────
+(function () {
+  if (window.innerWidth >= 768) return;
+
+  const titleEl = document.querySelector('.hero-title');
+  if (!titleEl) return;
+
+  const span1   = document.createElement('span');
+  const br      = document.createElement('br');
+  const span2   = document.createElement('span');
+  span2.className = 'accent';
+  const cursor  = document.createElement('span');
+  cursor.className = 'hero-cursor';
+  cursor.textContent = '|';
+
+  titleEl.innerHTML = '';
+  titleEl.append(span1, br, span2, cursor);
+  br.style.display = 'none';
+
+  const WORD1 = 'Democracy';
+  const WORD2 = 'Reimagined';
+  const TYPE  = 80;
+  const BACK  = 48;
+  const PAUSE_FULL  = 1800;
+  const PAUSE_EMPTY = 500;
+
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  async function run() {
+    while (true) {
+      for (let i = 1; i <= WORD1.length; i++) {
+        span1.textContent = WORD1.slice(0, i);
+        await sleep(TYPE);
+      }
+      br.style.display = '';
+      for (let i = 1; i <= WORD2.length; i++) {
+        span2.textContent = WORD2.slice(0, i);
+        await sleep(TYPE);
+      }
+
+      await sleep(PAUSE_FULL);
+
+      for (let i = WORD2.length - 1; i >= 0; i--) {
+        span2.textContent = WORD2.slice(0, i);
+        await sleep(BACK);
+      }
+      br.style.display = 'none';
+      for (let i = WORD1.length - 1; i >= 0; i--) {
+        span1.textContent = WORD1.slice(0, i);
+        await sleep(BACK);
+      }
+
+      await sleep(PAUSE_EMPTY);
+    }
+  }
+
+  run();
+})();
+
 // ── Scroll-reveal animations ─────────────────────────────────────
 (function () {
   // Tag an element with animation type + optional stagger delay

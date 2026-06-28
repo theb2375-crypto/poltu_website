@@ -1111,8 +1111,12 @@
   }
 
   /* ── Scroll-driven Camera ──────────────────────────────────────── */
+  const isMobile = window.innerWidth < 768;
+
   const WIDE  = { x: -0.2, y: 0.05, z: 5,    fov: 52 };
   const CLOSE = { x: -1.4, y: 0.10, z: 0.18, fov: 22 };
+  // Mobile: pan right to reveal the window + lamp instead of zooming into newspaper
+  const CLOSE_MOB = { x: 3.2, y: 0.3, z: 2.8, fov: 50 };
 
   function lerp(a, b, t) { return a + (b - a) * t; }
   function ease(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2; }
@@ -1129,7 +1133,12 @@
   let smoothScrollT = 0;
 
   // Pre-allocate — never create objects inside the render loop
-  const lookAtVec = new THREE.Vector3(-1.4, 0.05, -2.1); // centred on floating newspaper
+  // Desktop: centred on floating newspaper. Mobile: window + lamp area (right side of room).
+  const lookAtVec = new THREE.Vector3(
+    isMobile ? 2.8  : -1.4,
+    isMobile ? 0.2  :  0.05,
+    isMobile ? -5.5 : -2.1
+  );
 
   let heroEl  = null;
   let heroH   = window.innerHeight;
@@ -1160,11 +1169,12 @@
     smoothScrollT = lerp(smoothScrollT, rawScrollT, expDecay(9, dt));
 
     // 2. Map smoothed scroll → camera target
-    const t  = ease(smoothScrollT);
-    tgt.x   = lerp(WIDE.x,   CLOSE.x,   t);
-    tgt.y   = lerp(WIDE.y,   CLOSE.y,   t);
-    tgt.z   = lerp(WIDE.z,   CLOSE.z,   t);
-    tgt.fov = lerp(WIDE.fov, CLOSE.fov, t);
+    const t   = ease(smoothScrollT);
+    const END = isMobile ? CLOSE_MOB : CLOSE;
+    tgt.x   = lerp(WIDE.x,   END.x,   t);
+    tgt.y   = lerp(WIDE.y,   END.y,   t);
+    tgt.z   = lerp(WIDE.z,   END.z,   t);
+    tgt.fov = lerp(WIDE.fov, END.fov, t);
 
     // 3. Damp camera toward target — k=11, very snappy but not instant
     const ca = expDecay(11, dt);

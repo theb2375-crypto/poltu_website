@@ -148,7 +148,7 @@ nav {
 
 .hero-sub {
   margin-top: 24px; max-width: 400px;
-  font-size: 13.5px; line-height: 1.75; color: var(--white40);
+  font-size: 13.5px; font-weight: 600; line-height: 1.75; color: var(--white70);
   text-align: left;
   border-left: 2px solid var(--white15);
   padding-left: 14px;
@@ -170,14 +170,14 @@ nav {
 }
 .btn-primary:hover { background: var(--teal); color: var(--white); transform: translateY(-1px); }
 .btn-ghost {
-  background: rgba(255,255,255,0.04); color: var(--white70);
+  background: rgba(255,255,255,0.08); color: var(--white);
   padding: 14px 28px; border-radius: 6px;
   font-size: 14px; font-weight: 600; text-decoration: none;
-  border: 1px solid var(--white15); transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.35); transition: all 0.2s;
   display: inline-flex; align-items: center; gap: 8px;
   letter-spacing: -0.2px;
 }
-.btn-ghost:hover { border-color: var(--white40); color: var(--white); }
+.btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.14); color: var(--white); }
 
 /* fade + bottom gradient mask */
 .hero::after {
@@ -676,7 +676,7 @@ footer {
   .hero { padding: 100px 20px 80px; min-height: 100svh; }
   .hero-glow { width: 100%; height: 320px; }
   .hero-content { max-width: 100%; }
-  .hero-title   { font-size: clamp(32px, 9vw, 52px); letter-spacing: -1.5px; }
+  .hero-title   { font-size: clamp(32px, 9vw, 52px); letter-spacing: -1.5px; animation: none !important; opacity: 1 !important; transform: none !important; }
   .hero-eyebrow { font-size: 10px; padding: 5px 12px; margin-bottom: 24px; }
   .hero-sub     { font-size: 13px; max-width: 100%; margin-left: 0; padding: 14px 0 14px 14px; }
   .hero-cta-row { gap: 10px; }
@@ -788,4 +788,17 @@ footer {
 [data-anim].in-view {
   opacity: 1;
   transform: none;
+}
+
+/* Mobile hero typewriter cursor */
+.hero-cursor {
+  display: inline;
+  color: var(--teal);
+  font-weight: 300;
+  margin-left: 1px;
+  animation: _cursorBlink 0.75s step-end infinite;
+}
+@keyframes _cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
