@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PoltuReform — Democracy, Reimagined</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <!-- Inline SVG logo — crisp at any DPI -->
+    <svg class="nav-logo-img" width="34" height="34" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="nlg" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#5ECBB8"/>
+          <stop offset="100%" stop-color="#2E7A6C"/>
+        </linearGradient>
+        <linearGradient id="nsh" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="ncc"><rect width="160" height="160" rx="38"/></clipPath>
+      </defs>
+      <rect width="160" height="160" rx="38" fill="url(#nlg)"/>
+      <rect width="160" height="80" rx="38" fill="url(#nsh)" clip-path="url(#ncc)"/>
+      <rect x="1.5" y="1.5" width="157" height="157" rx="36.5" stroke="white" stroke-opacity="0.14" stroke-width="1.5" fill="none"/>
+      <!-- P stem -->
+      <rect x="36" y="34" width="22" height="92" rx="11" fill="white"/>
+      <!-- P bowl -->
+      <path d="M 58 34 A 34 34 0 0 1 58 90" stroke="white" stroke-width="22" fill="none" stroke-linecap="round"/>
+      <!-- Saffron dot + micro Ashoka ring -->
+      <circle cx="122" cy="122" r="16" fill="#FF9933"/>
+      <circle cx="122" cy="122" r="7"  stroke="#0A3380" stroke-width="2" fill="none" opacity="0.55"/>
+      <g stroke="#0A3380" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+        <line x1="122" y1="115.5" x2="122" y2="113"/><line x1="122" y1="128.5" x2="122" y2="131"/>
+        <line x1="115.5" y1="122" x2="113" y2="122"/><line x1="128.5" y1="122" x2="131" y2="122"/>
+        <line x1="117" y1="117" x2="115.1" y2="115.1"/><line x1="127" y1="127" x2="128.9" y2="128.9"/>
+        <line x1="127" y1="117" x2="128.9" y2="115.1"/><line x1="117" y1="127" x2="115.1" y2="128.9"/>
+      </g>
+    </svg>
+    <div class="nav-logo-text-wrap">
+      <span class="nav-logo-text">PoltuReform</span>
+      <span class="nav-logo-sub">🇮🇳 For Indian Citizens · Coming Soon</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#why"      class="nav-link">Problem</a>
+    <a href="#features" class="nav-link">Features</a>
+    <a href="#how"      class="nav-link">How It Works</a>
+    <a href="#roadmap"  class="nav-link">Roadmap</a>
+    <a href="#faq"      class="nav-link">FAQ</a>
+  </div>
+  <div class="nav-right">
+    <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#why"      class="mobile-nav-link">The Problem</a>
+  <a href="#app"      class="mobile-nav-link">The App</a>
+  <a href="#features" class="mobile-nav-link">Features</a>
+  <a href="#how"      class="mobile-nav-link">How It Works</a>
+  <a href="#roadmap"  class="mobile-nav-link">Roadmap</a>
+  <a href="#media"    class="mobile-nav-link">Media</a>
+  <a href="#press"    class="mobile-nav-link">Updates</a>
+  <a href="#faq"      class="mobile-nav-link">FAQ</a>
+  <a href="#waitlist" class="mobile-nav-link mobile-nav-cta">Join Waitlist →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <!-- HERO TEXT -->
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Democracy<br><span class="accent">Reimagined</span>
+    </h1>
+    <div class="hero-cta-row">
+      <a href="#waitlist" class="btn-primary">
+        Get Early Access
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#why" class="btn-ghost">
+        Learn More
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <p class="hero-sub">
+      Contest elections for free. Back the candidates you believe in. Track every rupee — transparently.
+    </p>
+  </div>
+
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">For Indian Citizens</span>
+    <span class="ticker-item">Democracy Reimagined</span>
+    <span class="ticker-item">Transparent Fund Tracking</span>
+    <span class="ticker-item">People-First Politics</span>
+    <span class="ticker-item">Free to Contest</span>
+    <span class="ticker-item">Youth-Driven Change</span>
+    <span class="ticker-item">₹0 to Participate</span>
+    <span class="ticker-item">22+ App Screens</span>
+    <span class="ticker-item">For Indian Citizens</span>
+    <span class="ticker-item">Democracy Reimagined</span>
+    <span class="ticker-item">Transparent Fund Tracking</span>
+    <span class="ticker-item">People-First Politics</span>
+    <span class="ticker-item">Free to Contest</span>
+    <span class="ticker-item">Youth-Driven Change</span>
+    <span class="ticker-item">₹0 to Participate</span>
+    <span class="ticker-item">22+ App Screens</span>
+  </div>
+</div>
+
+<!-- WHY IT EXISTS -->
+<section class="why-section" id="why">
+  <div class="section-label">The Problem</div>
+  <h2 class="section-title">Elections shouldn't<br>cost a fortune.</h2>
+  <p class="section-sub">Across India, capable people sit out elections because the cost of entry — not the cost of ideas — keeps them out.</p>
+  <div class="compare-wrap">
+    <div class="compare-row head">
+      <div class="compare-cat"></div>
+      <div class="compare-head-label old"><div class="chl-dot"></div>The Old Way</div>
+      <div class="compare-head-label new"><div class="chl-dot"></div>PoltuReform</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cat">Cost to contest</div>
+      <div class="compare-val old"><span class="mark">–</span>Crores in campaign spend</div>
+      <div class="compare-val new"><span class="mark">✓</span>₹5,000 refundable deposit</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cat">Who can run</div>
+      <div class="compare-val old"><span class="mark">–</span>Needs party backing or a family name</div>
+      <div class="compare-val new"><span class="mark">✓</span>Any eligible citizen, ID-verified</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cat">Funding</div>
+      <div class="compare-val old"><span class="mark">–</span>Private donors, undisclosed sums</div>
+      <div class="compare-val new"><span class="mark">✓</span>Public donations, capped &amp; visible</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cat">Spending oversight</div>
+      <div class="compare-val old"><span class="mark">–</span>Disclosed after the fact, if ever</div>
+      <div class="compare-val new"><span class="mark">✓</span>Donors approve spend before it happens</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cat">Reach</div>
+      <div class="compare-val old"><span class="mark">–</span>Whoever can afford the airtime</div>
+      <div class="compare-val new"><span class="mark">✓</span>Equal feed visibility, equal print space</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHONE CAROUSEL -->
+<section class="phones-section" id="app">
+  <div class="section-label">The App</div>
+  <h2 class="section-title">22+ screens. Built for<br>real democratic action.</h2>
+  <p class="section-sub">Your constituency, your candidates, your donations — all in one place.</p>
+  <div class="phone-scroll-wrap">
+    <div class="phone-track">
+      <div class="phone-item">
+        <div class="phone-frame"><img src="screen-registration.jpg" alt="Registration"></div>
+        <div class="phone-caption">Candidate Registration</div>
+      </div>
+      <div class="phone-item">
+        <div class="phone-frame"><img src="screen-donations.jpg" alt="Donations"></div>
+        <div class="phone-caption">Donations & Transparency</div>
+      </div>
+      <div class="phone-item">
+        <div class="phone-frame"><img src="screen-about.jpg" alt="About"></div>
+        <div class="phone-caption">About & Vision</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="section-label">What We Offer</div>
+  <h2 class="section-title">Built for citizens.<br>Not corporations.</h2>
+  <p class="section-sub">Every feature gives the general public real ownership of who represents them.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-num">01</div>
+      <div class="feature-title">Free Candidate Registration</div>
+      <div class="feature-desc">Any qualified Indian citizen can contest with a ₹5,000 refundable deposit — not lakhs in campaign costs.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">02</div>
+      <div class="feature-title">Transparent Fund Tracking</div>
+      <div class="feature-desc">Every rupee voted on before spending. 50% donor approval required. Bills submitted as proof after use.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">03</div>
+      <div class="feature-title">Constituency-Based Feed</div>
+      <div class="feature-desc">Candidates, parties, and issues curated for your ward and district — politics that's actually local.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">04</div>
+      <div class="feature-title">Influencer Support System</div>
+      <div class="feature-desc">YouTubers and creators back candidates whose ideology aligns with theirs, directing audience support transparently.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">05</div>
+      <div class="feature-title">Free Print Media</div>
+      <div class="feature-desc">Daily newspapers and weekly magazines distributed free — equal column space for every candidate.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-num">06</div>
+      <div class="feature-title">Community Forums & Events</div>
+      <div class="feature-desc">Auditoriums, digital events with QR check-in, and forums where citizens shape the national conversation.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">Three roles.<br>One platform.</h2>
+  <p class="section-sub">Whether you're voting with your wallet, running for office, or rallying your audience — there's a path built for you.</p>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-role-tag">🗳️ Citizen</div>
+      <div class="how-role-title">Back what you believe in</div>
+      <div class="how-role-desc">Find your representatives, fund the ones you trust, and hold them to it.</div>
+      <div class="how-steps">
+        <div class="how-step"><div class="how-step-num">1</div><div class="how-step-text">Verify your constituency</div></div>
+        <div class="how-step"><div class="how-step-num">2</div><div class="how-step-text">Browse candidates, parties &amp; forums</div></div>
+        <div class="how-step"><div class="how-step-num">3</div><div class="how-step-text">Fund what you believe in</div></div>
+        <div class="how-step"><div class="how-step-num">4</div><div class="how-step-text">Vote on how funds get spent</div></div>
+      </div>
+    </div>
+    <div class="how-card">
+      <div class="how-role-tag">📋 Candidate</div>
+      <div class="how-role-title">Run without the war chest</div>
+      <div class="how-role-desc">Eligibility and ideas decide who gets on the ballot, not bank balance.</div>
+      <div class="how-steps">
+        <div class="how-step"><div class="how-step-num">1</div><div class="how-step-text">Apply with ID &amp; ₹5,000 deposit</div></div>
+        <div class="how-step"><div class="how-step-num">2</div><div class="how-step-text">Get verified by the platform</div></div>
+        <div class="how-step"><div class="how-step-num">3</div><div class="how-step-text">Build your profile &amp; platform</div></div>
+        <div class="how-step"><div class="how-step-num">4</div><div class="how-step-text">Raise funds, report every rupee spent</div></div>
+      </div>
+    </div>
+    <div class="how-card">
+      <div class="how-role-tag">🎤 Influencer</div>
+      <div class="how-role-title">Turn your audience into action</div>
+      <div class="how-role-desc">Direct the people who trust you toward the candidates who earn it.</div>
+      <div class="how-steps">
+        <div class="how-step"><div class="how-step-num">1</div><div class="how-step-text">Apply as a verified creator</div></div>
+        <div class="how-step"><div class="how-step-num">2</div><div class="how-step-text">Pick candidates aligned with your values</div></div>
+        <div class="how-step"><div class="how-step-num">3</div><div class="how-step-text">Share their platform with your audience</div></div>
+        <div class="how-step"><div class="how-step-num">4</div><div class="how-step-text">See the transparent impact of every rupee raised</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap-section" id="roadmap">
+  <div class="section-label">Roadmap</div>
+  <h2 class="section-title">Where we are.<br>Where we're headed.</h2>
+  <p class="section-sub">Built in public, one milestone at a time.</p>
+  <div class="roadmap-track">
+    <div class="roadmap-item done">
+      <div class="roadmap-node">✓</div>
+      <div class="roadmap-phase">Phase 01 — Design</div>
+      <div class="roadmap-title2">22+ Screens, Fully Designed</div>
+      <div class="roadmap-desc">Onboarding, candidate profiles, forums, events, donations, and feed — every flow mapped and designed end to end.</div>
+      <div class="roadmap-status">Complete</div>
+    </div>
+    <div class="roadmap-item active">
+      <div class="roadmap-node"><div class="roadmap-node-pulse"></div></div>
+      <div class="roadmap-phase">Phase 02 — Beta</div>
+      <div class="roadmap-title2">5-City Pilot</div>
+      <div class="roadmap-desc">Candidate verification, donation escrow, and the constituency feed go live for early registered users.</div>
+      <div class="roadmap-status">In Progress</div>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-node">3</div>
+      <div class="roadmap-phase">Phase 03 — Reach</div>
+      <div class="roadmap-title2">Poltu Print &amp; Campus Partnerships</div>
+      <div class="roadmap-desc">Free print media rollout and IIT software development clubs bring the platform offline and into engineering campuses.</div>
+      <div class="roadmap-status">Upcoming</div>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-node">4</div>
+      <div class="roadmap-phase">Phase 04 — Scale</div>
+      <div class="roadmap-title2">Pan-India Launch</div>
+      <div class="roadmap-desc">Every constituency, every state — open to any citizen ready to run.</div>
+      <div class="roadmap-status">Upcoming</div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA LINKS -->
+<section class="media-section" id="media">
+  <div class="section-label">Follow Along</div>
+  <h2 class="section-title">Watch. Follow.<br>Stay Updated.</h2>
+  <p class="section-sub">We build in public. Walkthroughs, updates, and behind-the-scenes on our channels.</p>
+  <div class="media-grid">
+    <a href="https://youtube.com" target="_blank" class="media-card">
+      <div class="media-icon">▶️</div>
+      <div><div class="media-card-title">YouTube Channel</div><div class="media-card-sub">Feature walkthroughs, explainers, and team interviews.</div></div>
+      <div class="media-arrow">→</div>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="media-card">
+      <div class="media-icon">📸</div>
+      <div><div class="media-card-title">Instagram</div><div class="media-card-sub">App UI previews, design peeks, and community stories.</div></div>
+      <div class="media-arrow">→</div>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="media-card">
+      <div class="media-icon">🐦</div>
+      <div><div class="media-card-title">Twitter / X</div><div class="media-card-sub">Quick updates, policy debates, conversations about Indian democracy.</div></div>
+      <div class="media-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- PRESS CLIPPINGS -->
+<section class="clips-section" id="press">
+  <div class="section-label">Updates</div>
+  <h2 class="section-title">Latest from<br>the team.</h2>
+  <p class="section-sub">Development milestones, announcements, and thinking behind the platform.</p>
+  <div class="clips-grid">
+
+    <div class="clip-card">
+      <div class="clip-source">App Update</div>
+      <div class="clip-img-wrap">
+        <img src="screen-registration.jpg" alt="App UI Designs" class="clip-img">
+      </div>
+      <div class="clip-headline">PoltuReform v1.0 UI Designs Completed — 22+ Screens Ready</div>
+      <div class="clip-body">The full onboarding, candidate profiles, forum, events, donations, and feed are all designed and ready for development.</div>
+      <div class="clip-footer">
+        <span class="clip-date">June 2025</span>
+        <span class="clip-category">Product</span>
+      </div>
+    </div>
+
+    <div class="clip-card">
+      <div class="clip-source">Milestone</div>
+      <div class="clip-img-wrap">
+        <img src="screen-about.jpg" alt="User Roles" class="clip-img">
+      </div>
+      <div class="clip-headline">3 User Roles Defined: Citizens, Candidates, and Influencers</div>
+      <div class="clip-body">Distinct journeys for voters, contestants, and public figures — each with tailored donation and visibility features.</div>
+      <div class="clip-footer">
+        <span class="clip-date">May 2025</span>
+        <span class="clip-category">Development</span>
+      </div>
+    </div>
+
+    <div class="clip-card">
+      <div class="clip-source">Founder's Note</div>
+      <div class="clip-img-wrap">
+        <img src="screen-donations.jpg" alt="Platform Vision" class="clip-img">
+      </div>
+      <div class="clip-headline">EBPL — Why We're Building This Platform for Indian Democracy</div>
+      <div class="clip-body">Why elections remain inaccessible to capable young candidates without corporate backing, and how we fix that.</div>
+      <div class="clip-footer">
+        <span class="clip-date">April 2025</span>
+        <span class="clip-category">Vision</span>
+      </div>
+    </div>
+
+    <div class="clip-card">
+      <div class="clip-source">Coming Soon</div>
+      <div class="clip-img-wrap clip-img-placeholder">
+        <span class="clip-placeholder-label">Partnership Announcement</span>
+      </div>
+      <div class="clip-headline">IIT Software Development Clubs Partnership Initiative</div>
+      <div class="clip-body">Establishing development clubs at IITs to bring top engineering talent into building civic technology for India.</div>
+      <div class="clip-footer">
+        <span class="clip-date">Upcoming</span>
+        <span class="clip-category">Partnership</span>
+      </div>
+    </div>
+
+    <div class="clip-card">
+      <div class="clip-source">Feature</div>
+      <div class="clip-img-wrap clip-img-placeholder">
+        <span class="clip-placeholder-label">Poltu Print · Offline Media</span>
+      </div>
+      <div class="clip-headline">Poltu Print: Free Newspapers and Magazines for Every City</div>
+      <div class="clip-body">10–20% of all donations fund physical print media — equal column space for all candidates, reader submissions included.</div>
+      <div class="clip-footer">
+        <span class="clip-date">Upcoming</span>
+        <span class="clip-category">Offline Reach</span>
+      </div>
+    </div>
+
+    <div class="clip-card">
+      <div class="clip-source">Launch</div>
+      <div class="clip-img-wrap clip-img-placeholder">
+        <span class="clip-placeholder-label">Beta Access · Sign Up</span>
+      </div>
+      <div class="clip-headline">Beta Testing Planned — Sign Up to Be First in Line</div>
+      <div class="clip-body">We're targeting beta access for early registered users before full public launch. Join the waitlist below.</div>
+      <div class="clip-footer">
+        <span class="clip-date">2025</span>
+        <span class="clip-category">Announcement</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-label">Questions</div>
+  <h2 class="section-title">Before you ask.</h2>
+  <p class="section-sub">The things people usually want to know before they sign up.</p>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary><span class="faq-q-text">Is PoltuReform affiliated with any political party?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">No. It's an independent civic platform. Candidates from any party — or none — can register, and the feed treats every listing the same way.</div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="faq-q-text">How are candidates verified before they appear on the platform?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">Every applicant submits government ID and meets the standard eligibility checks for the office they're seeking before a profile goes live.</div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="faq-q-text">Where does my donation actually go?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">Funds sit in escrow until a candidate requests a release. A release needs 50% donor approval, and a bill or receipt has to be submitted afterward as proof.</div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="faq-q-text">Can anyone register as a candidate?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">Any citizen who meets the eligibility requirements for the office — age, residency, and so on — can apply, regardless of party backing or personal wealth.</div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="faq-q-text">What's the ₹5,000 deposit for?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">It's a refundable filing fee, there to keep registrations serious without making them inaccessible the way real campaign costs do.</div>
+    </details>
+    <details class="faq-item">
+      <summary><span class="faq-q-text">When can I actually use the app?</span><span class="faq-icon">+</span></summary>
+      <div class="faq-a">The design is complete and beta testing is being planned for select cities. Join the waitlist below to get early access.</div>
+    </details>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="cta-section" id="waitlist">
+  <div class="cta-glow"></div>
+  <div class="section-label">Early Access</div>
+  <h2 class="section-title">Be part of<br>the first wave.</h2>
+  <p class="section-sub">PoltuReform launches soon. Join the waitlist and we'll notify you the moment the app is ready.</p>
+  <div class="waitlist-form">
+    <input class="waitlist-input" type="email" placeholder="your@email.com">
+    <button class="waitlist-btn" onclick="this.textContent='✓ Joined!'">Join Waitlist</button>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">User Roles</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Event Types</div></div>
+    <div class="stat"><div class="stat-num">22+</div><div class="stat-label">App Screens</div></div>
+    <div class="stat"><div class="stat-num">₹0</div><div class="stat-label">To Contest</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand">PoltuReform</div>
+      <div class="footer-tagline">A platform for any citizen ready to run, fund, or rally — without a war chest or a party badge.</div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <a href="#app">The App</a>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="#press">In the Press</a>
+        <a href="#faq">FAQ</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Get In Touch</div>
+        <a href="#waitlist">Join Waitlist</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">Made with ❤️ for Indian Democracy · © 2025 PoltuReform</div>
+    <div class="social-row">
+      <a href="https://youtube.com" target="_blank" class="social-icon">▶️</a>
+      <a href="https://instagram.com" target="_blank" class="social-icon">📸</a>
+      <a href="https://twitter.com" target="_blank" class="social-icon">🐦</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+<script src="bg-webgl.js"></script>
+</body>
+</html>
